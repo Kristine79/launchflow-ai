@@ -31,22 +31,8 @@ export function Sidebar() {
         collapsed ? 'w-16' : 'w-64'
       )}
     >
-      <div className="flex h-14 items-center gap-2 px-4 border-b">
-        <div className="flex h-8 w-8 items-center justify-center shrink-0">
-          <img src={logoSrc} alt="LaunchFlow AI" className="h-8 w-8 object-contain" />
-        </div>
-        <AnimatePresence>
-          {!collapsed && (
-            <motion.span
-              initial={{ opacity: 0, width: 0 }}
-              animate={{ opacity: 1, width: 'auto' }}
-              exit={{ opacity: 0, width: 0 }}
-              className="font-semibold text-sm whitespace-nowrap overflow-hidden"
-            >
-              {t('brand.name')}
-            </motion.span>
-          )}
-        </AnimatePresence>
+      <div className="flex h-14 items-center justify-center px-4 border-b">
+        <img src={logoSrc} alt="LaunchFlow AI" className="h-10 w-auto object-contain" />
       </div>
 
       <ScrollArea className="flex-1 py-2">
