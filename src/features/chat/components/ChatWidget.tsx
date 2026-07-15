@@ -101,7 +101,7 @@ export function ChatWidget() {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.95 }}
             transition={{ duration: 0.2 }}
-            className="fixed bottom-20 right-4 z-[100] flex h-[480px] w-[360px] flex-col rounded-2xl border bg-popover shadow-2xl"
+            className="fixed bottom-20 right-4 left-4 sm:left-auto z-[100] flex h-[480px] w-auto sm:w-[360px] flex-col rounded-2xl border bg-popover shadow-2xl"
           >
             <div className="flex items-center justify-between border-b px-4 py-3">
               <div className="flex items-center gap-2">

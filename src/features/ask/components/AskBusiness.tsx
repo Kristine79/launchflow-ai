@@ -207,7 +207,7 @@ export function AskBusiness() {
                           <Badge variant="info" className="text-[9px] ml-auto">{typeConfig[msg.type].badge}</Badge>
                         )}
                       </div>
-                      <div className="grid grid-cols-2 gap-2">
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                         {msg.structured.items.map((item, i) => (
                           <div key={i} className="flex justify-between items-center rounded-lg bg-background/50 px-3 py-2 text-xs">
                             <span className="text-muted-foreground">{item.label}</span>

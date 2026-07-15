@@ -38,13 +38,13 @@ export function NotificationsPage() {
 
   return (
     <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }} className="space-y-6">
-      <div className="flex items-center justify-between">
+      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
         <div>
           <h1 className="text-2xl font-semibold tracking-tight">{t('notifications.title')}</h1>
           <p className="text-sm text-muted-foreground mt-1">{t('notifications.description')}</p>
         </div>
         {unread > 0 && (
-          <Button variant="outline" size="sm" className="text-xs gap-1.5">
+          <Button variant="outline" size="sm" className="text-xs gap-1.5 shrink-0">
             <Mail className="h-3 w-3" /> {t('notifications.markAllRead')}
           </Button>
         )}

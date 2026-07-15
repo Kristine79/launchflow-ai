@@ -1,4 +1,4 @@
-import { Suspense, useEffect } from 'react';
+import { Suspense, useEffect, useState } from 'react';
 import { Outlet } from 'react-router';
 import { Sidebar } from './Sidebar';
 import { Header } from './Header';
@@ -22,15 +22,16 @@ function PageFallback() {
 }
 
 export function AppLayout() {
+  const [mobileOpen, setMobileOpen] = useState(false);
   useEffect(() => { initDemoEvents(); }, []);
 
   return (
-    <div className="flex h-screen">
-      <Sidebar />
+    <div className="flex h-screen overflow-hidden">
+      <Sidebar mobileOpen={mobileOpen} onMobileClose={() => setMobileOpen(false)} />
       <div className="flex flex-1 flex-col min-w-0">
         <DemoBanner />
-        <Header />
-        <main className="flex-1 overflow-y-auto p-6">
+        <Header onMenuToggle={() => setMobileOpen(prev => !prev)} />
+        <main className="flex-1 overflow-y-auto p-4 sm:p-6">
           <Suspense fallback={<PageFallback />}>
             <Outlet />
           </Suspense>

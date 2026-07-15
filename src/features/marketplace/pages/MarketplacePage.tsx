@@ -147,7 +147,7 @@ export function MarketplacePage() {
               const sb = statusBadge(p.status);
               const Icon = sb.icon;
               return (
-                <div key={p.id} className="flex items-center justify-between p-3 rounded-lg border text-sm">
+                <div key={p.id} className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 p-3 rounded-lg border text-sm">
                   <div className="flex items-center gap-3 min-w-0 flex-1">
                     <Icon className={`h-4 w-4 shrink-0 ${p.status === 'listed' ? 'text-green-500' : p.status === 'error' ? 'text-destructive' : 'text-yellow-500'}`} />
                     <div className="min-w-0">
@@ -155,10 +155,10 @@ export function MarketplacePage() {
                       <p className="text-xs text-muted-foreground font-mono">{p.sku} • {p.marketplace}</p>
                     </div>
                   </div>
-                  <div className="flex items-center gap-3 shrink-0">
+                  <div className="flex items-center gap-3 shrink-0 pl-7 sm:pl-0">
                     <span className="text-sm font-mono">{p.price} ₽</span>
                     <Badge variant={sb.variant} className="text-[9px]">{t(`marketplace.${p.status}`)}</Badge>
-                    <span className="text-[10px] text-muted-foreground">{p.updatedAt}</span>
+                    <span className="text-[10px] text-muted-foreground hidden sm:inline">{p.updatedAt}</span>
                   </div>
                 </div>
               );

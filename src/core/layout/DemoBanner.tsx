@@ -51,12 +51,12 @@ export function DemoBanner() {
   };
 
   return (
-    <div className="bg-primary/10 border-b border-primary/20 px-4 py-1.5 flex items-center justify-between text-xs">
-      <div className="flex items-center gap-2">
+    <div className="bg-primary/10 border-b border-primary/20 px-4 py-1.5 flex items-center justify-between gap-2 text-xs">
+      <div className="flex items-center gap-2 min-w-0">
         <FlaskConical className="h-3 w-3 text-primary shrink-0" />
-        <span className="text-primary font-medium">{t('demo.banner')}</span>
+        <span className="text-primary font-medium truncate">{t('demo.banner')}</span>
       </div>
-      <div className="flex items-center gap-2">
+      <div className="flex items-center gap-2 shrink-0">
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
             <Button variant="ghost" size="sm" className="h-6 gap-1 text-[11px] px-2 text-muted-foreground">

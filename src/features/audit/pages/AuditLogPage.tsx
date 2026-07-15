@@ -72,18 +72,18 @@ export function AuditLogPage() {
       transition={{ duration: 0.4 }}
       className="space-y-6"
     >
-      <div className="flex items-center justify-between">
+      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
         <div>
           <h1 className="text-2xl font-semibold tracking-tight">{t('audit.title')}</h1>
           <p className="text-sm text-muted-foreground mt-1">{t('audit.description')}</p>
         </div>
-        <Button variant="outline" size="sm" className="gap-2">
+        <Button variant="outline" size="sm" className="gap-2 shrink-0">
           <Download className="h-4 w-4" />
           {t('audit.export')}
         </Button>
       </div>
 
-      <div className="flex items-center gap-3">
+      <div className="flex flex-col sm:flex-row sm:items-center gap-3">
         <div className="relative flex-1 max-w-md">
           <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
           <Input
@@ -93,7 +93,7 @@ export function AuditLogPage() {
             className="pl-9 h-10"
           />
         </div>
-        <div className="flex items-center gap-1.5">
+        <div className="flex items-center gap-1.5 flex-wrap">
           {['info', 'warning', 'error', 'success'].map(sev => (
             <Badge
               key={sev}

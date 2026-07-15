@@ -8,7 +8,7 @@ import {
 import { CommandPalette } from '@/features/search/components/CommandPalette';
 import { useLocale } from '@/core/i18n/I18nProvider';
 import { NAV_ITEMS } from '@/lib/constants';
-import { Bell, LogOut, Settings, User, Search, ChevronRight } from 'lucide-react';
+import { Bell, LogOut, Settings, User, Search, Menu } from 'lucide-react';
 
 function useCurrentPage() {
   const { pathname } = useLocation();
@@ -16,7 +16,11 @@ function useCurrentPage() {
   return item;
 }
 
-export function Header() {
+interface HeaderProps {
+  onMenuToggle?: () => void;
+}
+
+export function Header({ onMenuToggle }: HeaderProps) {
   const navigate = useNavigate();
   const { t } = useLocale();
   const currentPage = useCurrentPage();
@@ -49,8 +53,18 @@ export function Header() {
 
   return (
     <>
-      <header className="flex h-14 items-center justify-between border-b bg-background px-6 relative z-50">
-        <div className="flex items-center gap-3 min-w-0">
+      <header className="flex h-14 items-center justify-between border-b bg-background px-4 sm:px-6 relative z-50">
+        <div className="flex items-center gap-2 min-w-0">
+          {onMenuToggle && (
+            <Button
+              variant="ghost"
+              size="icon"
+              className="shrink-0 md:hidden"
+              onClick={onMenuToggle}
+            >
+              <Menu className="h-5 w-5" />
+            </Button>
+          )}
           {currentPage && (
             <div className="flex items-center gap-2 text-sm min-w-0">
               <span className="text-muted-foreground font-medium truncate">
@@ -60,7 +74,7 @@ export function Header() {
           )}
         </div>
 
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-1.5 sm:gap-2">
           <button
             onClick={() => setSearchOpen(true)}
             className="hidden sm:flex items-center gap-2 h-8 px-3 rounded-md border bg-muted/50 text-xs text-muted-foreground hover:bg-muted transition-colors w-48"
@@ -72,7 +86,7 @@ export function Header() {
             </kbd>
           </button>
 
-          <Button variant="ghost" size="sm" className="sm:hidden" onClick={() => setSearchOpen(true)}>
+          <Button variant="ghost" size="icon" className="sm:hidden" onClick={() => setSearchOpen(true)}>
             <Search className="h-4 w-4" />
           </Button>
 

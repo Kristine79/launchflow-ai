@@ -111,10 +111,10 @@ export function ReviewsPage() {
                   <span className="text-xs font-mono text-muted-foreground">{review.rating}</span>
                 </div>
                 <div className="flex-1 min-w-0">
-                  <div className="flex items-center gap-2 text-xs text-muted-foreground">
+                  <div className="flex items-center gap-2 text-xs text-muted-foreground flex-wrap">
                     <span className="font-medium">{review.author}</span>
-                    <span>•</span>
-                    <span>{review.platform}</span>
+                    <span className="hidden sm:inline">•</span>
+                    <span className="hidden sm:inline">{review.platform}</span>
                     <span>•</span>
                     <span>{review.createdAt}</span>
                     <Badge variant="outline" className="text-[9px] ml-auto">
