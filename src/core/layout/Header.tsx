@@ -77,13 +77,10 @@ export function Header({ onMenuToggle }: HeaderProps) {
         <div className="flex items-center gap-1.5 sm:gap-2">
           <button
             onClick={() => setSearchOpen(true)}
-            className="hidden sm:flex items-center gap-2 h-8 px-3 rounded-md border bg-muted/50 text-xs text-muted-foreground hover:bg-muted transition-colors w-48"
+            className="hidden sm:flex items-center gap-2 h-8 px-3 rounded-md border bg-muted/50 text-xs text-muted-foreground hover:bg-muted transition-colors w-32"
           >
             <Search className="h-3.5 w-3.5 shrink-0" />
             <span className="truncate">{t('header.search')}</span>
-            <kbd className="ml-auto flex items-center gap-0.5 rounded border bg-background px-1.5 py-0.5 text-[9px] font-medium text-muted-foreground/70">
-              <span className="text-[10px]">⌘</span>K
-            </kbd>
           </button>
 
           <Button variant="ghost" size="icon" className="sm:hidden" onClick={() => setSearchOpen(true)}>
