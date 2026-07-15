@@ -3,6 +3,7 @@ import { Outlet } from 'react-router';
 import { Sidebar } from './Sidebar';
 import { Header } from './Header';
 import { DemoBanner } from './DemoBanner';
+import { ChatWidget } from '@/features/chat/components/ChatWidget';
 import { Skeleton } from '@/core/ui/skeleton';
 
 function PageFallback() {
@@ -31,6 +32,7 @@ export function AppLayout() {
             <Outlet />
           </Suspense>
         </main>
+        <ChatWidget />
       </div>
     </div>
   );

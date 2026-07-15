@@ -156,6 +156,68 @@ app.post('/ai/product-description', requireAuth, async (req, res, next) => {
   } catch (e) { next(e); }
 });
 
+// Chat
+app.post('/chat', requireAuth, async (req, res, next) => {
+  try {
+    const { messages } = req.body;
+    const lastMessage = messages?.[messages.length - 1]?.content || '';
+    if (!lastMessage) return res.status(400).json(error('Message is required', 400));
+
+    const { default: OpenAI } = await import('openai');
+    const apiKey = process.env.OPENROUTER_API_KEY || process.env.OPENAI_API_KEY;
+    if (!apiKey) {
+      return res.json(success({
+        role: 'assistant',
+        content: 'AI не настроен. Добавьте OPENROUTER_API_KEY или OPENAI_API_KEY в .env.local',
+      }));
+    }
+
+    const client = new OpenAI({
+      apiKey,
+      baseURL: process.env.OPENROUTER_API_KEY ? 'https://openrouter.ai/api/v1' : undefined,
+      defaultHeaders: process.env.OPENROUTER_API_KEY
+        ? { 'HTTP-Referer': 'https://launchflow.ai', 'X-Title': 'LaunchFlow AI' }
+        : undefined,
+    });
+
+    const systemMsg = {
+      role: 'system',
+      content: `Ты — AI-ассистент платформы LaunchFlow AI. Ты помогаешь fashion-брендам управлять коллекциями, производством, контентом и маркетплейсами.
+
+Ты можешь:
+- Отвечать на вопросы о платформе и её возможностях
+- Помогать с описанием товаров и коллекций
+- Давать советы по управлению fashion-брендом
+- Анализировать данные и предлагать инсайты
+
+Отвечай на том же языке, на котором к тебе обращаются. Будь полезным, конкретным и дружелюбным.`,
+    };
+
+    res.setHeader('Content-Type', 'text/event-stream');
+    res.setHeader('Cache-Control', 'no-cache');
+    res.setHeader('Connection', 'keep-alive');
+
+    const stream = await client.chat.completions.create({
+      model: 'gpt-4o-mini',
+      messages: [systemMsg, ...messages.slice(-10)],
+      stream: true,
+      temperature: 0.5,
+    });
+
+    let fullContent = '';
+    for await (const chunk of stream) {
+      const content = chunk.choices[0]?.delta?.content || '';
+      if (content) {
+        fullContent += content;
+        res.write(`data: ${JSON.stringify({ content })}\n\n`);
+      }
+    }
+
+    res.write(`data: ${JSON.stringify({ done: true })}\n\n`);
+    res.end();
+  } catch (e) { next(e); }
+});
+
 app.use(errorHandler);
 
 export default app;

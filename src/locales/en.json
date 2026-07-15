@@ -330,6 +330,12 @@
     "recStitchingTitle": "",
     "recStitchingDesc": ""
   },
+  "chat": {
+    "title": "",
+    "greeting": "",
+    "placeholder": "",
+    "error": ""
+  },
   "notifCount": "",
   "insights": {
     "title": "",
