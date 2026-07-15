@@ -17,12 +17,21 @@
     "knowledgeBase": "База знаний",
     "executiveInsights": "AI-инсайты",
     "analytics": "Аналитика",
-    "integrations": "Интеграции"
+    "integrations": "Интеграции",
+    "auditLog": "Журнал аудита",
+    "scenarioSimulator": "Scenario Simulator"
   },
   "header": {
     "settings": "Настройки",
     "profile": "Профиль",
-    "signOut": "Выйти"
+    "signOut": "Выйти",
+    "search": "Поиск по LaunchFlow...",
+    "quickActions": "Быстрые действия",
+    "createCollection": "Создать коллекцию",
+    "createProduct": "Создать товар",
+    "askAi": "Спросить AI",
+    "searchNoResults": "Ничего не найдено",
+    "goTo": "Перейти к"
   },
   "demo": {
     "banner": "Демо-режим — изучение LaunchFlow AI с тестовыми данными",
@@ -32,7 +41,16 @@
     "signIn": "Войти",
     "createAccount": "Создать аккаунт",
     "enterDemo": "Войти в демо-режим",
-    "or": "Или"
+    "or": "Или",
+    "demoMode": "Демо-режим",
+    "resetData": "Сбросить данные",
+    "scenario": "Сценарий",
+    "scenarioFashion": "Fashion Brand",
+    "scenarioSmall": "Small Brand",
+    "scenarioEnterprise": "Enterprise",
+    "scenarioStartup": "Startup",
+    "activeScenario": "Активный сценарий",
+    "dataWillReset": "Данные будут сброшены"
   },
   "auth": {
     "clerkNotConfigured": "Clerk не настроен.",
@@ -45,9 +63,11 @@
     "count": "{n} шт.",
     "countProducts": "{n} товаров",
     "completePercent": "{n}% готово",
-    "vsLastMonth": "{n}% за месяц",
+    "vsLastMonth": "за месяц",
     "collections": "коллекций",
     "launched": "запущено",
+    "all": "Все",
+    "confirm": "Подтвердить",
     "noRecommendations": "Рекомендаций нет — всё в порядке"
   },
   "dashboard": {
@@ -65,6 +85,7 @@
     "viewTasksDesc": "Проверить прогресс команды",
     "openReviews": "Отзывы",
     "openReviewsDesc": "Аналитика отзывов и обратной связи",
+    "statRevenue": "Выручка",
     "statTotalCollections": "Всего коллекций",
     "statActiveCollections": "Активных коллекций",
     "statProductsInProduction": "Товаров в производстве",
@@ -234,7 +255,16 @@
     "tags": "Теги",
     "aiSummary": "База знаний содержит {total} документов по {categories} категориям. Последнее обновление: {lastUpdated}. Рекомендуется добавить документы по производству и контролю качества.",
     "categories": "Категории",
-    "lastUpdated": "Последнее обновление"
+    "lastUpdated": "Последнее обновление",
+    "search": "Поиск по базе знаний...",
+    "askAi": "Спросить AI",
+    "askAiPlaceholder": "Задайте вопрос по документам...",
+    "recommended": "Рекомендованные",
+    "recentlyViewed": "Недавние",
+    "relatedDocs": "Похожие документы",
+    "noResults": "Ничего не найдено",
+    "totalDocs": "документов",
+    "categoriesCount": "категорий"
   },
   "production": {
     "title": "Производство",
@@ -275,10 +305,18 @@
     "activeCollections": "Активных коллекций",
     "avgReadiness": "Средняя готовность",
     "revenueForecast": "Прогноз выручки",
+    "executiveSummary": "Executive Summary",
     "aiSummary": "Сводка: {collectionsActive} активных коллекций, {productsTotal} товаров, средняя готовность {avgReadiness}%. Прогноз роста — {growth}%.",
     "readinessBreakdown": "Распределение готовности",
     "recommendations": "Рекомендации AI",
     "trend": "Тренд"
+  },
+  "audit": {
+    "title": "Журнал аудита",
+    "description": "Полная хронология событий и изменений в системе",
+    "eventLog": "Хронология событий",
+    "search": "Поиск по событиям...",
+    "export": "Экспорт CSV"
   },
   "analytics": {
     "title": "Аналитика",
@@ -361,6 +399,12 @@
     "recSizeGuideDesc": "Отсутствуют детальные замеры для всех размеров — это увеличивает возвраты.",
     "recStitchingTitle": "Проверьте качество строчки",
     "recStitchingDesc": "Последняя проверка QC выявила несоответствие строчки на рукавах."
+  },
+  "briefing": {
+    "title": "AI Executive Briefing",
+    "companyHealth": "Здоровье компании",
+    "criticalIssues": "Критические проблемы",
+    "aiRecommendations": "Рекомендации AI"
   },
   "chat": {
     "title": "AI-ассистент",

@@ -2,12 +2,13 @@ import { cn } from '@/lib/utils';
 import type { HTMLAttributes } from 'react';
 
 const badgeVariants = {
-  default: 'border-transparent bg-primary text-primary-foreground shadow',
+  default: 'border-transparent bg-primary text-primary-foreground shadow-sm',
   secondary: 'border-transparent bg-secondary text-secondary-foreground',
-  destructive: 'border-transparent bg-destructive text-destructive-foreground shadow',
+  destructive: 'border-transparent bg-destructive text-destructive-foreground shadow-sm',
   outline: 'text-foreground border',
-  success: 'border-transparent bg-success/10 text-success',
-  warning: 'border-transparent bg-warning/10 text-warning',
+  success: 'border-transparent bg-success/10 text-success border-success/20',
+  warning: 'border-transparent bg-warning/10 text-warning border-warning/20',
+  info: 'border-transparent bg-[hsl(var(--ai-card-bg))] text-[hsl(var(--ai-badge))] border-[hsl(var(--ai-card-border))]',
 };
 
 interface BadgeProps extends HTMLAttributes<HTMLDivElement> {

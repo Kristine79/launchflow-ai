@@ -6,7 +6,7 @@ import { useLocale } from '@/core/i18n/I18nProvider';
 import {
   LayoutDashboard, Layers, Shirt, Kanban, MessageSquare, Store,
   Image, Factory, CheckSquare, Bell, BookOpen, Brain, BarChart3,
-  Puzzle, ChevronLeft, ChevronRight, Sparkles,
+  Puzzle, History, Zap, ChevronLeft, ChevronRight, Sparkles,
 } from 'lucide-react';
 import { ScrollArea } from '@/core/ui/scroll-area';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -14,7 +14,8 @@ import type { ElementType } from 'react';
 
 const iconMap: Record<string, ElementType> = {
   LayoutDashboard, Layers, Shirt, Kanban, MessageSquare, Store,
-  Image, Factory, CheckSquare, Bell, BookOpen, Brain, BarChart3, Puzzle,
+  Image, Factory, CheckSquare, Bell, BookOpen,   Brain, BarChart3,
+  Puzzle, History, Zap,
 };
 
 export function Sidebar() {

@@ -5,6 +5,10 @@ import { AiOverview } from '../components/AiOverview';
 import { RecentCollections } from '../components/RecentCollections';
 import { ActivityFeed } from '../components/ActivityFeed';
 import { QuickActions } from '../components/QuickActions';
+import { ExecutiveBriefing } from '@/features/briefing';
+import { DecisionPanel } from '@/features/decision';
+import { AskBusiness } from '@/features/ask';
+import { SuggestionAutopilot } from '@/features/autopilot';
 
 export function DashboardPage() {
   const { t } = useLocale();
@@ -21,12 +25,16 @@ export function DashboardPage() {
         <p className="text-sm text-muted-foreground mt-1">{t('dashboard.description')}</p>
       </div>
 
+      <ExecutiveBriefing />
+      <DecisionPanel />
+      <SuggestionAutopilot />
       <AiOverview />
       <StatCardGrid />
 
       <div className="grid gap-6 lg:grid-cols-2">
         <RecentCollections />
         <div className="space-y-6">
+          <AskBusiness />
           <QuickActions />
           <ActivityFeed />
         </div>

@@ -24,6 +24,8 @@ const InsightsPage = lazy(() => import('@/features/insights/pages/InsightsPage')
 const AnalyticsPage = lazy(() => import('@/features/analytics/pages/AnalyticsPage').then(m => ({ default: m.AnalyticsPage })));
 const IntegrationsPage = lazy(() => import('@/features/integrations/pages/IntegrationsPage').then(m => ({ default: m.IntegrationsPage })));
 const SettingsPage = lazy(() => import('@/features/settings/pages/SettingsPage').then(m => ({ default: m.SettingsPage })));
+const AuditLogPage = lazy(() => import('@/features/audit/pages/AuditLogPage').then(m => ({ default: m.AuditLogPage })));
+const ScenarioSimulatorPage = lazy(() => import('@/features/simulator/pages/ScenarioSimulatorPage').then(m => ({ default: m.ScenarioSimulatorPage })));
 
 const AuthSuspense = ({ children }: { children: React.ReactNode }) => (
   <Suspense fallback={<div className="flex min-h-screen items-center justify-center"><Skeleton className="h-8 w-48" /></div>}>
@@ -73,6 +75,8 @@ export const router = createBrowserRouter([
       { path: 'insights', element: <InsightsPage /> },
       { path: 'analytics', element: <AnalyticsPage /> },
       { path: 'integrations', element: <IntegrationsPage /> },
+      { path: 'audit-log', element: <AuditLogPage /> },
+      { path: 'scenario-simulator', element: <ScenarioSimulatorPage /> },
       { path: 'settings', element: <SettingsPage /> },
     ],
   },

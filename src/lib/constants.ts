@@ -12,7 +12,9 @@ export const NAV_ITEMS = [
   { labelKey: 'nav.knowledgeBase', href: '/knowledge', icon: 'BookOpen', phase: 7 },
   { labelKey: 'nav.executiveInsights', href: '/insights', icon: 'Brain', phase: 8 },
   { labelKey: 'nav.analytics', href: '/analytics', icon: 'BarChart3', phase: 8 },
-  { labelKey: 'nav.integrations', href: '/integrations', icon: 'Puzzle', phase: 8 },
+  { labelKey: 'nav.integrations',  href: '/integrations',  icon: 'Puzzle',          phase: 8 },
+  { labelKey: 'nav.auditLog',     href: '/audit-log',     icon: 'History',         phase: 7 },
+  { labelKey: 'nav.scenarioSimulator', href: '/scenario-simulator', icon: 'Zap', phase: 9 },
 ] as const;
 
 export const COLLECTION_STATUSES = ['planning', 'design', 'sampling', 'production', 'content', 'marketplace', 'launched'] as const;
@@ -39,4 +41,6 @@ export const NAV_LABEL_KEYS = {
   'Executive Insights': 'executiveInsights',
   'Analytics': 'analytics',
   'Integrations': 'integrations',
+  'Audit Log': 'auditLog',
+  'Scenario Simulator': 'scenarioSimulator',
 } as const;

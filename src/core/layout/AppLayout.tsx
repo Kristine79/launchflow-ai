@@ -1,10 +1,11 @@
-import { Suspense } from 'react';
+import { Suspense, useEffect } from 'react';
 import { Outlet } from 'react-router';
 import { Sidebar } from './Sidebar';
 import { Header } from './Header';
 import { DemoBanner } from './DemoBanner';
 import { ChatWidget } from '@/features/chat/components/ChatWidget';
 import { Skeleton } from '@/core/ui/skeleton';
+import { initDemoEvents } from '@/core/events';
 
 function PageFallback() {
   return (
@@ -21,6 +22,8 @@ function PageFallback() {
 }
 
 export function AppLayout() {
+  useEffect(() => { initDemoEvents(); }, []);
+
   return (
     <div className="flex h-screen">
       <Sidebar />

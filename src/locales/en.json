@@ -17,12 +17,21 @@
     "knowledgeBase": "",
     "executiveInsights": "",
     "analytics": "",
-    "integrations": ""
+    "integrations": "",
+    "auditLog": "",
+    "scenarioSimulator": ""
   },
   "header": {
     "settings": "",
     "profile": "",
-    "signOut": ""
+    "signOut": "",
+    "search": "",
+    "quickActions": "",
+    "createCollection": "",
+    "createProduct": "",
+    "askAi": "",
+    "searchNoResults": "",
+    "goTo": ""
   },
   "demo": {
     "banner": "",
@@ -32,7 +41,16 @@
     "signIn": "",
     "createAccount": "",
     "enterDemo": "",
-    "or": ""
+    "or": "",
+    "demoMode": "",
+    "resetData": "",
+    "scenario": "",
+    "scenarioFashion": "",
+    "scenarioSmall": "",
+    "scenarioEnterprise": "",
+    "scenarioStartup": "",
+    "activeScenario": "",
+    "dataWillReset": ""
   },
   "auth": {
     "clerkNotConfigured": "",
@@ -45,9 +63,11 @@
     "count": "",
     "countProducts": "",
     "completePercent": "",
-    "vsLastMonth": "",
+    "vsLastMonth": "vs last month",
     "collections": "",
     "launched": "",
+    "all": "",
+    "confirm": "",
     "noRecommendations": ""
   },
   "dashboard": {
@@ -65,6 +85,7 @@
     "viewTasksDesc": "",
     "openReviews": "",
     "openReviewsDesc": "",
+    "statRevenue": "",
     "statTotalCollections": "",
     "statActiveCollections": "",
     "statProductsInProduction": "",
@@ -234,7 +255,16 @@
     "tags": "",
     "aiSummary": "",
     "categories": "",
-    "lastUpdated": ""
+    "lastUpdated": "",
+    "search": "",
+    "askAi": "",
+    "askAiPlaceholder": "",
+    "recommended": "",
+    "recentlyViewed": "",
+    "relatedDocs": "",
+    "noResults": "",
+    "totalDocs": "",
+    "categoriesCount": ""
   },
   "production": {
     "title": "",
@@ -330,6 +360,12 @@
     "recStitchingTitle": "",
     "recStitchingDesc": ""
   },
+  "briefing": {
+    "title": "",
+    "companyHealth": "",
+    "criticalIssues": "",
+    "aiRecommendations": ""
+  },
   "chat": {
     "title": "",
     "greeting": "",
@@ -344,10 +380,18 @@
     "activeCollections": "",
     "avgReadiness": "",
     "revenueForecast": "",
+    "executiveSummary": "",
     "aiSummary": "",
     "readinessBreakdown": "",
     "recommendations": "",
     "trend": ""
+  },
+  "audit": {
+    "title": "",
+    "description": "",
+    "eventLog": "",
+    "search": "",
+    "export": ""
   },
   "analytics": {
     "title": "",

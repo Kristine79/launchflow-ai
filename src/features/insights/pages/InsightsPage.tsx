@@ -7,8 +7,10 @@ import {
 } from 'recharts';
 import {
   Brain, TrendingUp, Package, Layers, Target, Sparkles, AlertTriangle, Lightbulb,
+  TrendingDown, DollarSign, BarChart3,
 } from 'lucide-react';
 import { useLocale } from '@/core/i18n/I18nProvider';
+import { cn } from '@/lib/utils';
 
 const MONTHLY_REVENUE = [
   { month: 'Июл', revenue: 120000, forecast: 125000 },
@@ -29,11 +31,79 @@ const READINESS_DATA = [
 
 const COLORS = ['#22c55e', '#eab308', '#3b82f6', '#a855f7', '#ec4899'];
 
-const RECOMMENDATIONS = [
-  { icon: AlertTriangle, title: 'Производство отстаёт', description: 'Выполнено только 60% задач по пошиву осенней коллекции.', priority: 'high' as const },
-  { icon: Lightbulb, title: 'Оптимизация цен', description: 'Анализ конкурентов показывает потенциал роста маржи на 12%.', priority: 'medium' as const },
-  { icon: TrendingUp, title: 'Wildberries: рост', description: 'Продажи на WB выросли на 35% — увеличьте рекламный бюджет.', priority: 'high' as const },
+type ImpactType = 'gain' | 'loss';
+
+interface Recommendation {
+  icon: typeof AlertTriangle;
+  color: string;
+  bgColor: string;
+  borderColor: string;
+  title: string;
+  description: string;
+  risk: 'high' | 'medium' | 'low';
+  confidence: number;
+  impact: { type: ImpactType; value: string };
+  roi: string;
+}
+
+const RECOMMENDATIONS: Recommendation[] = [
+  {
+    icon: AlertTriangle,
+    color: 'text-destructive',
+    bgColor: 'bg-destructive/10',
+    borderColor: 'border-destructive/20',
+    title: 'Производство отстаёт',
+    description: 'Выполнено только 60% задач по пошиву осенней коллекции. Рекомендуется усилить контроль на 2 недели.',
+    risk: 'high',
+    confidence: 92,
+    impact: { type: 'loss', value: 'до 1.2M ₽' },
+    roi: 'Сокращение потерь на 40%',
+  },
+  {
+    icon: Lightbulb,
+    color: 'text-warning',
+    bgColor: 'bg-warning/10',
+    borderColor: 'border-warning/20',
+    title: 'Оптимизация цен',
+    description: 'Анализ конкурентов показывает потенциал роста маржи на 12% при корректировке ценовой политики.',
+    risk: 'medium',
+    confidence: 78,
+    impact: { type: 'gain', value: '+480K ₽' },
+    roi: 'ROI 320% за 3 месяца',
+  },
+  {
+    icon: TrendingUp,
+    color: 'text-success',
+    bgColor: 'bg-success/10',
+    borderColor: 'border-success/20',
+    title: 'Wildberries: взрывной рост',
+    description: 'Продажи на WB выросли на 35%. Увеличение рекламного бюджета на 20% даст дополнительный рост.',
+    risk: 'low',
+    confidence: 85,
+    impact: { type: 'gain', value: '+2.1M ₽' },
+    roi: 'ROI 180%',
+  },
+  {
+    icon: DollarSign,
+    color: 'text-[hsl(var(--ai-badge))]',
+    bgColor: 'bg-[hsl(var(--ai-card-bg))]',
+    borderColor: 'border-[hsl(var(--ai-card-border))]',
+    title: 'Новый канал: Telegram Shop',
+    description: 'AI выявил 340K целевых пользователей в Telegram. Запуск магазина даст приток аудитории 25-34.',
+    risk: 'low',
+    confidence: 73,
+    impact: { type: 'gain', value: '+890K ₽' },
+    roi: 'ROI 210%',
+  },
 ];
+
+const riskStyles = {
+  high: { label: 'High Risk', variant: 'destructive' as const },
+  medium: { label: 'Medium Risk', variant: 'warning' as const },
+  low: { label: 'Low Risk', variant: 'success' as const },
+};
+
+const RISK_ORDER = ['high', 'medium', 'low'] as const;
 
 export function InsightsPage() {
   const { t } = useLocale();
@@ -44,6 +114,10 @@ export function InsightsPage() {
     { icon: Target, value: '74%', label: t('insights.avgReadiness'), color: 'text-green-500' },
     { icon: TrendingUp, value: '1.2M ₽', label: t('insights.revenueForecast'), color: 'text-yellow-500' },
   ];
+
+  const sorted = [...RECOMMENDATIONS].sort(
+    (a, b) => RISK_ORDER.indexOf(a.risk) - RISK_ORDER.indexOf(b.risk)
+  );
 
   return (
     <motion.div
@@ -65,14 +139,14 @@ export function InsightsPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3, delay: i * 0.05 }}
           >
-            <Card>
+            <Card className="shadow-[var(--card-shadow)] transition-shadow duration-200 hover:shadow-[var(--card-shadow-hover)]">
               <CardContent className="p-6">
                 <div className="flex items-center gap-4">
-                  <div className={`rounded-lg bg-muted p-2.5 ${s.color}`}>
+                  <div className={cn('rounded-lg p-2.5 bg-muted', s.color)}>
                     <s.icon className="h-5 w-5" />
                   </div>
                   <div>
-                    <p className="text-2xl font-bold">{s.value}</p>
+                    <p className="text-2xl font-bold tracking-tight">{s.value}</p>
                     <p className="text-xs text-muted-foreground">{s.label}</p>
                   </div>
                 </div>
@@ -82,12 +156,12 @@ export function InsightsPage() {
         ))}
       </div>
 
-      <Card className="border-primary/20 bg-primary/5">
+      <Card className="ai-card ai-card-hover">
         <CardHeader className="pb-3">
           <div className="flex items-center gap-2">
-            <Brain className="h-4 w-4 text-primary" />
-            <CardTitle className="text-sm font-medium">{t('insights.title')}</CardTitle>
-            <Badge variant="secondary" className="text-[10px] ml-auto">{t('dashboard.aiPowered')}</Badge>
+            <Brain className="h-5 w-5 text-[hsl(var(--ai-badge))]" />
+            <CardTitle className="text-sm font-medium">{t('insights.executiveSummary')}</CardTitle>
+            <Badge variant="info" className="text-[10px] ml-auto">{t('dashboard.aiPowered')}</Badge>
           </div>
         </CardHeader>
         <CardContent>
@@ -101,7 +175,7 @@ export function InsightsPage() {
         <Card>
           <CardHeader>
             <CardTitle className="text-sm font-medium flex items-center gap-1.5">
-              <TrendingUp className="h-4 w-4" /> {t('insights.revenueForecast')}
+              <TrendingUp className="h-4 w-4 text-primary" /> {t('insights.revenueForecast')}
             </CardTitle>
           </CardHeader>
           <CardContent>
@@ -130,7 +204,7 @@ export function InsightsPage() {
         <Card>
           <CardHeader>
             <CardTitle className="text-sm font-medium flex items-center gap-1.5">
-              <Target className="h-4 w-4" /> {t('insights.readinessBreakdown')}
+              <Target className="h-4 w-4 text-primary" /> {t('insights.readinessBreakdown')}
             </CardTitle>
           </CardHeader>
           <CardContent>
@@ -176,31 +250,58 @@ export function InsightsPage() {
 
       <div>
         <h2 className="text-sm font-medium mb-3 flex items-center gap-1.5">
-          <Sparkles className="h-4 w-4 text-primary" /> {t('insights.recommendations')}
+          <Sparkles className="h-4 w-4 text-[hsl(var(--ai-badge))]" /> {t('insights.recommendations')}
         </h2>
-        <div className="grid gap-3 sm:grid-cols-3">
-          {RECOMMENDATIONS.map((r, i) => (
-            <motion.div
-              key={r.title}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: i * 0.1 }}
-            >
-              <Card className="h-full">
-                <CardContent className="p-4">
-                  <div className="flex items-start gap-3">
-                    <div className={`rounded-lg p-2 mt-0.5 shrink-0 ${r.priority === 'high' ? 'bg-destructive/10 text-destructive' : 'bg-primary/10 text-primary'}`}>
-                      <r.icon className="h-4 w-4" />
+        <div className="grid gap-3 sm:grid-cols-2">
+          {sorted.map((r, i) => {
+            const riskInfo = riskStyles[r.risk];
+            return (
+              <motion.div
+                key={r.title}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: i * 0.08 }}
+              >
+                <Card className={cn('h-full border-l-[3px] transition-shadow duration-200 hover:shadow-[var(--card-shadow-hover)]', r.borderColor)}>
+                  <CardContent className="p-5">
+                    <div className="flex items-start gap-4">
+                      <div className={cn('rounded-lg p-2.5 shrink-0', r.bgColor, r.color)}>
+                        <r.icon className="h-5 w-5" />
+                      </div>
+                      <div className="flex-1 min-w-0 space-y-2.5">
+                        <div>
+                          <p className="text-sm font-medium">{r.title}</p>
+                          <p className="text-xs text-muted-foreground mt-1 leading-relaxed">{r.description}</p>
+                        </div>
+                        <div className="flex flex-wrap items-center gap-2">
+                          <Badge variant={riskInfo.variant} className="text-[10px]">{riskInfo.label}</Badge>
+                          <Badge variant="info" className="text-[10px]">
+                            AI Confidence {r.confidence}%
+                          </Badge>
+                        </div>
+                        <div className="flex items-center gap-3 text-xs text-muted-foreground">
+                          <div className="flex items-center gap-1">
+                            {r.impact.type === 'loss' ? (
+                              <TrendingDown className="h-3 w-3 text-destructive" />
+                            ) : (
+                              <TrendingUp className="h-3 w-3 text-success" />
+                            )}
+                            <span className={r.impact.type === 'loss' ? 'text-destructive' : 'text-success'}>
+                              {r.impact.type === 'loss' ? 'Potential Loss' : 'Potential Gain'}: {r.impact.value}
+                            </span>
+                          </div>
+                          <div className="flex items-center gap-1">
+                            <BarChart3 className="h-3 w-3 text-[hsl(var(--ai-badge))]" />
+                            <span className="text-[hsl(var(--ai-badge))]">{r.roi}</span>
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                    <div>
-                      <p className="text-sm font-medium">{r.title}</p>
-                      <p className="text-xs text-muted-foreground mt-1 leading-relaxed">{r.description}</p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            </motion.div>
-          ))}
+                  </CardContent>
+                </Card>
+              </motion.div>
+            );
+          })}
         </div>
       </div>
     </motion.div>
