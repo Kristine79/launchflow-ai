@@ -71,7 +71,7 @@ export function DropdownMenuContent({ children, className, ..._props }: Dropdown
   return (
     <div
       className={cn(
-        'absolute right-0 z-[100] mt-1 min-w-[8rem] overflow-hidden rounded-xl border bg-background p-1 text-foreground shadow-md animate-in fade-in-0 zoom-in-95',
+        'absolute right-0 z-50 mt-1 min-w-[8rem] overflow-hidden rounded-xl border bg-popover p-1 text-popover-foreground shadow-md animate-in fade-in-0 zoom-in-95',
         className
       )}
     >
