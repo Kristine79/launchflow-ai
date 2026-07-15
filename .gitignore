@@ -6,3 +6,5 @@ dist-server/
 *.tsbuildinfo
 .next/
 .superpowers/
+
+.vercel

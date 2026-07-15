@@ -1,299 +1,299 @@
 # LaunchFlow AI — Product Requirements Document
 
-**Version:** 0.1.0
-**Status:** MVP Complete (Phases 1-8)
-**Date:** July 2026
+**Версия:** 0.1.0
+**Статус:** MVP завершён (Фазы 1-8)
+**Дата:** Июль 2026
 
 ---
 
-## 1. Product Overview
+## 1. Обзор продукта
 
-### Vision
-LaunchFlow AI is an AI-powered Product Operating System for fashion brands. It unifies collection management, production tracking, marketplace operations, content management, and AI-driven analytics into a single platform — replacing fragmented workflows across spreadsheets, messengers, and separate marketplace dashboards.
+### Видение
+LaunchFlow AI — AI-операционная система для fashion-брендов. Она объединяет управление коллекциями, отслеживание производства, операции на маркетплейсах, управление контентом и AI-аналитику в единой платформе — заменяя разрозненные процессы в таблицах, мессенджерах и отдельных кабинетах маркетплейсов.
 
-### Mission
-Reduce the time from design to launch for fashion collections by 40% through intelligent automation, real-time collaboration, and AI-powered decision support.
+### Миссия
+Сократить время от дизайна до запуска fashion-коллекций на 40% за счёт интеллектуальной автоматизации, совместной работы в реальном времени и AI-поддержки принятия решений.
 
 ### Elevator Pitch
-> One platform to plan, build, launch, and optimize fashion collections — with AI that sees what you miss.
+> Одна платформа, чтобы планировать, создавать, запускать и оптимизировать fashion-коллекции — с AI, который видит то, что вы упускаете.
 
 ---
 
-## 2. Target Audience
+## 2. Целевая аудитория
 
-### Primary ICP
-- **Role:** Brand Owner, CEO / Founder
-- **Company:** Small to mid-size fashion brands (5-200 employees)
-- **Pain:** Juggling Excel/Notion/Trello + WhatsApp/Telegram + WB/Ozon dashboards
-- **Need:** Single source of truth for the entire collection lifecycle
+### Первичный ICP
+- **Роль:** Владелец бренда, CEO / Основатель
+- **Компания:** Небольшие и средние fashion-бренды (5-200 сотрудников)
+- **Боль:** Жонглирование Excel/Notion/Trello + WhatsApp/Telegram + кабинетами WB/Ozon
+- **Потребность:** Единый источник истины для всего жизненного цикла коллекции
 
-### Secondary ICP
-- **Role:** Product Manager, Production Manager, Content Manager
-- **Company:** Same brands
-- **Pain:** No visibility into upstream/downstream dependencies, manual status updates
-- **Need:** Clear task ownership, pipeline visibility, automated notifications
+### Вторичный ICP
+- **Роль:** Product Manager, Production Manager, Content Manager
+- **Компания:** Те же бренды
+- **Боль:** Нет видимости зависимостей между этапами, ручное обновление статусов
+- **Потребность:** Чёткое назначение задач, видимость конвейера, автоматические уведомления
 
-### Current Focus
-Russian-speaking fashion brands selling on Wildberries and Ozon (hence Russian-first localization). English localization is architected but not yet filled.
-
----
-
-## 3. User Personas
-
-| Persona | Goals | Pain Points |
-|---------|-------|-------------|
-| **Alexey** — Brand Owner | See real-time business health, make data-driven decisions, reduce time-to-market | Spreadsheets outdated, no single dashboard, can't spot bottlenecks |
-| **Anna** — Product Manager | Track collections from design to launch, manage tasks, coordinate teams | Status meetings waste time, no pipeline visibility, manual updates |
-| **Elena** — Content Manager | Manage photo/video production, track marketplace listings | No asset tracking, rework due to lost files, missed deadlines |
-| **Dmitry** — Production Manager | Manage suppliers, track batches, monitor quality | Late deliveries not flagged, supplier performance not tracked |
+### Текущий фокус
+Русскоязычные fashion-бренды, продающие на Wildberries и Ozon (отсюда локализация в первую очередь на русский). Английская локализация архитектурно заложена, но ещё не заполнена.
 
 ---
 
-## 4. Core Features
+## 3. Персоны пользователей
+
+| Персона | Цели | Боли |
+|---------|------|------|
+| **Алексей** — Владелец бренда | Видеть реальное состояние бизнеса, принимать решения на основе данных, сокращать time-to-market | Таблицы устарели, нет единого дашборда, не видно узких мест |
+| **Анна** — Product Manager | Отслеживать коллекции от дизайна до запуска, управлять задачами, координировать команды | Летучки отнимают время, нет видимости конвейера, ручные обновления |
+| **Елена** — Content Manager | Управлять фото/видео-продакшеном, отслеживать листинги на маркетплейсах | Нет учёта ассетов, переделки из-за потери файлов, сорванные дедлайны |
+| **Дмитрий** — Production Manager | Управлять поставщиками, отслеживать партии, контролировать качество | Задержки поставок не видны, эффективность поставщиков не отслеживается |
+
+---
+
+## 4. Ключевые функции
 
 ### 4.1 Auth & Access Control
-- Clerk-powered authentication (email + social login)
-- Built-in demo mode with preloaded data (no signup required)
-- Role-based access: owner, ceo, product_manager, designer, production_manager, content_manager, marketing, employee, guest
+- Аутентификация через Clerk (email + соцсети)
+- Встроенный demo-режим с предзагруженными данными (без регистрации)
+- Ролевой доступ: owner, ceo, product_manager, designer, production_manager, content_manager, marketing, employee, guest
 
 ### 4.2 Dashboard
-- Executive overview — stat cards (collections, products, readiness, tasks)
-- AI-powered analytical summary with dynamic insights
-- Recent collections with quick status glance
-- Activity feed (launches, photos, production starts)
-- Quick actions (new collection, new product, tasks, reviews)
+- Executive overview — stat-карточки (коллекции, товары, готовность, задачи)
+- AI-аналитическая сводка с динамическими инсайтами
+- Последние коллекции с быстрым просмотром статуса
+- Лента активности (запуски, фото, старты производства)
+- Быстрые действия (новая коллекция, новый товар, задачи, отзывы)
 
-### 4.3 Collections
-- Collection list with status badges and launch readiness scores
-- Collection detail with panoramic readiness radar
-- Category-level scoring (design, samples, production, photos, video, SEO, marketplace cards, documents, certificates, tasks, quality, approval)
-- AI-generated recommendations per collection
-- Production timeline with milestones
+### 4.3 Коллекции
+- Список коллекций с бейджами статусов и оценками готовности
+- Детальная страница с панорамным радаром готовности
+- Оценка по категориям (дизайн, сэмплы, производство, фото, видео, SEO, карточки МП, документы, сертификаты, задачи, качество, согласование)
+- AI-рекомендации для каждой коллекции
+- Таймлайн производства с вехами
 
-### 4.4 Products
-- Product grid with status, health score, and pricing
-- Product detail with health breakdown, pricing analysis, and full status pipeline
-- 12-status lifecycle: idea → sketch → design → sample → approval → production → photo → content → wildberries → ozon → launched → optimization
+### 4.4 Товары
+- Сетка товаров со статусом, health score и ценой
+- Детальная страница с разбивкой здоровья, анализом цены и полным конвейером статусов
+- 12-статусный жизненный цикл: идея → эскиз → дизайн → сэмпл → согласование → производство → фото → контент → wildberries → ozon → запущен → оптимизация
 
 ### 4.5 Pipeline (Kanban)
-- Drag-and-drop Kanban board across all 12 product statuses
-- Visual progress tracking for all products
-- Inline status updates with optimistic UI
+- Drag-and-drop Kanban-доска по всем 12 статусам товаров
+- Визуальное отслеживание прогресса
+- Обновление статуса без перезагрузки (optimistic UI)
 
-### 4.6 Review Analytics
-- Aggregated review statistics from marketplaces
-- Sentiment distribution (positive / neutral / negative)
-- AI-generated insight summary with topic extraction
-- Individual review list with sentiment badges
+### 4.6 Аналитика отзывов
+- Агрегированная статистика отзывов с маркетплейсов
+- Распределение тональности (положительные / нейтральные / отрицательные)
+- AI-сводка с извлечением тем
+- Список отзывов с бейджами тональности
 
-### 4.7 Marketplace Management
-- Wildberries and Ozon account connections
-- Per-marketplace product listing status
-- Listing summary (total, active listed, pending, errors)
-- Product-level marketplace sync status
+### 4.7 Управление маркетплейсами
+- Подключение Wildberries и Ozon
+- Статус листинга по каждому маркетплейсу
+- Сводка (всего, активно размещено, ожидает, ошибки)
+- Статус синхронизации по каждому товару
 
-### 4.8 Content Studio
-- Asset management for photos, videos, and content
-- Per-type completion tracking
-- AI-generated content status summary
-- Status badges per asset (done, in_progress, pending)
+### 4.8 Контент-студия
+- Управление ассетами: фото, видео, контент
+- Отслеживание готовности по типам
+- AI-сводка статуса контента
+- Бейджи статусов (готово, в работе, ожидает)
 
-### 4.9 Production Management
-- Supplier directory with ratings and material types
-- Production batch tracking with timeline
-- Status badges (planned, in_progress, completed, delayed)
-- Active supplier and batch counts
+### 4.9 Управление производством
+- Справочник поставщиков с рейтингами и типами материалов
+- Отслеживание производственных партий с таймлайном
+- Бейджи статусов (запланировано, в производстве, завершено, задержка)
+- Счётчики активных поставщиков и партий
 
-### 4.10 Tasks
-- Priority-sorted task list (urgent → high → medium → low)
-- Task status workflow (todo → in_progress → review → done)
-- AI-summarized team progress and overdue alerts
+### 4.10 Задачи
+- Список задач, отсортированный по приоритету (срочно → высокий → средний → низкий)
+- Статусный workflow (к выполнению → в работе → на проверке → готово)
+- AI-сводка прогресса команды и предупреждения о просрочках
 
-### 4.11 Notifications
-- Multi-channel notification center
-- Four types: info, warning, success, error
-- Channel badges: email, telegram, push
-- Unread count with mark-all-read capability
+### 4.11 Уведомления
+- Мультиканальный центр уведомлений
+- Четыре типа: инфо, предупреждение, успех, ошибка
+- Бейджи каналов: email, telegram, push
+- Счётчик непрочитанных с возможностью отметить все прочитанными
 
-### 4.12 Knowledge Base
-- Document management with tags and categories
-- Category and tag filter preview
-- AI summary of knowledge base health
-- Last-updated tracking
+### 4.12 База знаний
+- Управление документами с тегами и категориями
+- Предпросмотр фильтрации по категориям и тегам
+- AI-сводка состояния базы знаний
+- Отслеживание даты последнего обновления
 
 ### 4.13 Executive Insights
-- Executive dashboard with key metrics
-- Revenue forecast line chart (actual vs projected)
-- Readiness breakdown donut chart
-- AI-generated recommendations (production, pricing, growth)
+- Executive dashboard с ключевыми метриками
+- Линейный график прогноза выручки (факт vs прогноз)
+- Кольцевая диаграмма распределения готовности
+- AI-рекомендации (производство, цены, рост)
 
-### 4.14 Analytics
-- KPI cards: total revenue, avg order value, conversion rate, active users
-- Revenue dynamics line chart
-- Category breakdown horizontal bar chart
-- Platform distribution pie chart (WB, Ozon, Website, Retail)
-- Orders bar chart
+### 4.14 Аналитика
+- KPI-карточки: общая выручка, средний чек, конверсия, активные пользователи
+- Линейный график динамики выручки
+- Горизонтальная столбчатая диаграмма по категориям
+- Круговая диаграмма распределения по платформам (WB, Ozon, Сайт, Розница)
+- Столбчатая диаграмма заказов
 
-### 4.15 Integrations
-- Connection management for external services
-- Supported: Wildberries, Ozon, Google Drive, Telegram, Slack, Notion, Shopify, ChatGPT
-- Per-service connect/disconnect controls
-- Integration stats (total, active, disconnected)
-
----
-
-## 5. AI Features
-
-### 5.1 Architecture
-- Interface-based design (`AiService` interface) with three implementations
-- **RealAiService** — calls GPT-4o-mini via OpenRouter or OpenAI with `response_format: json_object`
-- **MockAiService** — deterministic demo data with hardcoded responses per entity ID
-- Automatic provider selection: OpenRouter API key → OpenAI API key → Mock
-
-### 5.2 AI Capabilities
-| Feature | Endpoint | Output |
-|---------|----------|--------|
-| Collection Readiness Score | `GET /ai/readiness/:id` | 13-category 0-100 scores + recommendations |
-| Product Health Score | `GET /ai/health/:id` | 5-category scores + recommendations |
-| Executive Report | `GET /ai/executive-report` | Summary, launch readiness, risk alerts |
-| Future Insights | `GET /ai/insights` | Probability scores, forecasts, optimizations |
-| Product Description | `POST /ai/product-description` | SEO, benefits, marketplace descriptions |
-| Text Summary | `generateSummary()` | Key points, sentiment |
-
-### 5.3 Prompt Design
-Every AI prompt uses:
-- System message with role definition + strict JSON schema
-- `response_format: { type: 'json_object' }` for guaranteed parseable output
-- Low temperature (0.3) for deterministic results
-- Russian/English output based on context
+### 4.15 Интеграции
+- Управление подключением внешних сервисов
+- Поддерживаемые: Wildberries, Ozon, Google Drive, Telegram, Slack, Notion, Shopify, ChatGPT
+- Кнопки подключения/отключения для каждого сервиса
+- Статистика интеграций (всего, активно, отключено)
 
 ---
 
-## 6. Technical Architecture
+## 5. AI-возможности
+
+### 5.1 Архитектура
+- Интерфейсный дизайн (`AiService` interface) с тремя реализациями
+- **RealAiService** — вызывает GPT-4o-mini через OpenRouter или OpenAI с `response_format: json_object`
+- **MockAiService** — детерминированные демо-данные с хардкодными ответами по ID сущности
+- Автоматический выбор провайдера: OpenRouter API key → OpenAI API key → Mock
+
+### 5.2 AI-возможности
+| Фича | Endpoint | Результат |
+|------|----------|-----------|
+| Оценка готовности коллекции | `GET /ai/readiness/:id` | 13 категорий 0-100 + рекомендации |
+| Оценка здоровья товара | `GET /ai/health/:id` | 5 категорий + рекомендации |
+| Executive report | `GET /ai/executive-report` | Сводка, готовность к запуску, риски |
+| Future insights | `GET /ai/insights` | Вероятности, прогнозы, оптимизации |
+| Описание товара | `POST /ai/product-description` | SEO, выгоды, описания для МП |
+| Суммаризация | `generateSummary()` | Ключевые мысли, тональность |
+
+### 5.3 Дизайн промптов
+Каждый AI-промпт использует:
+- Системное сообщение с определением роли + строгой JSON-схемой
+- `response_format: { type: 'json_object' }` для гарантированно парсимого вывода
+- Низкая температура (0.3) для детерминированных результатов
+- Русский/английский вывод в зависимости от контекста
+
+---
+
+## 6. Техническая архитектура
 
 ### 6.1 Frontend
-- **Framework:** React 19 with TypeScript
-- **Bundler:** Vite 6
-- **Routing:** React Router v7 with lazy loading
-- **Styling:** Tailwind CSS v4 + shadcn/ui
-- **State:** TanStack React Query v5 (configured)
-- **Animations:** Framer Motion v11
-- **Charts:** Recharts v2
+- **Фреймворк:** React 19 + TypeScript
+- **Бандлер:** Vite 6
+- **Роутинг:** React Router v7 с lazy loading
+- **Стилизация:** Tailwind CSS v4 + shadcn/ui
+- **Состояние:** TanStack React Query v5 (настроен)
+- **Анимации:** Framer Motion v11
+- **Графики:** Recharts v2
 
 ### 6.2 Backend
-- **Runtime:** Vercel Serverless Functions (Node.js)
-- **Framework:** Express wrapped for serverless
-- **Auth:** Clerk backend SDK + custom middleware
+- **Среда:** Vercel Serverless Functions (Node.js)
+- **Фреймворк:** Express, адаптированный для serverless
+- **Auth:** Clerk backend SDK + кастомная middleware
 
 ### 6.3 Database
-- **Provider:** Neon (Serverless PostgreSQL)
-- **ORM:** Drizzle ORM with `drizzle-orm/vercel-postgres`
-- **Schema:** 12 tables — collections, products, tasks, notifications, reviews, suppliers, production_batches, users, activity_logs, comments, documents, roles
+- **Провайдер:** Neon (Serverless PostgreSQL)
+- **ORM:** Drizzle ORM с `drizzle-orm/vercel-postgres`
+- **Схема:** 12 таблиц — collections, products, tasks, notifications, reviews, suppliers, production_batches, users, activity_logs, comments, documents, roles
 
 ### 6.4 AI Layer
-- **Provider:** OpenRouter (primary) → OpenAI (fallback)
-- **Model:** `gpt-4o-mini`
+- **Провайдер:** OpenRouter (основной) → OpenAI (fallback)
+- **Модель:** `gpt-4o-mini`
 - **SDK:** `openai` npm package v4
-- **Security:** API keys in `process.env`, never exposed to client
+- **Безопасность:** API-ключи в `process.env`, никогда не уходят на клиент
 
 ---
 
-## 7. Architecture Decisions
+## 7. Архитектурные решения
 
-| Decision | Choice | Rationale |
-|----------|--------|-----------|
-| Module structure | Feature-based | Co-locates pages, components, and hooks by domain |
-| Localization | JSON files in `src/locales/` | Bundled at build time, O(1) lookup via flattened cache |
-| Locale default | Russian | Target market is Russian-speaking fashion brands |
-| Drag-and-drop | `@hello-pangea/dnd` | Modern maintained fork of react-beautiful-dnd |
-| Dropdown menu | Custom Context-based | Full control over positioning and state (no Radix dependency) |
-| AI provider | OpenRouter first | Single API for multiple model providers, unified billing |
-| Demo mode | sessionStorage | No backend dependency for evaluation |
-| Pricing display | RUB (₽) | Primary market is Russia |
+| Решение | Выбор | Обоснование |
+|---------|-------|-------------|
+| Структура модулей | Feature-based | Объединяет страницы, компоненты и хуки по доменам |
+| Локализация | JSON-файлы в `src/locales/` | Собираются на этапе сборки, O(1) lookup через flattened cache |
+| Язык по умолчанию | Русский | Целевой рынок — русскоязычные fashion-бренды |
+| Drag-and-drop | `@hello-pangea/dnd` | Современный поддерживаемый форк react-beautiful-dnd |
+| Выпадающее меню | Кастомное Context-based | Полный контроль позиционирования (без Radix) |
+| AI-провайдер | OpenRouter сначала | Единый API для нескольких моделей, унифицированный биллинг |
+| Demo-режим | sessionStorage | Не требует бэкенда для ознакомления |
+| Отображение цен | RUB (₽) | Основной рынок — Россия |
 
 ---
 
-## 8. Current State & Roadmap
+## 8. Текущее состояние и Roadmap
 
-### ✅ Phase 1 — Foundation (Complete)
-- Project scaffolding, Vite + React + TypeScript, Tailwind v4, shadcn/ui
-- Clerk auth with demo mode
-- Router with 19 lazy-loaded routes
-- Express API server with 12 CRUD endpoints
-- Drizzle schema (12 tables) + seed data
-- AI interfaces (AiService) + MockAiService
+### ✅ Фаза 1 — Фундамент (Завершено)
+- Scaffolding проекта: Vite + React + TypeScript, Tailwind v4, shadcn/ui
+- Clerk auth с demo-режимом
+- Роутер с 19 lazy-loaded маршрутами
+- Express API-сервер с 12 CRUD endpoint'ами
+- Drizzle схема (12 таблиц) + seed data
+- AI-интерфейсы (AiService) + MockAiService
 
-### ✅ Phase 2 — Collections & Products (Complete)
-- Collection list + detail with readiness radar, timeline, AI recommendations
-- Product list + detail with health score, pricing, status pipeline
+### ✅ Фаза 2 — Коллекции и Товары (Завершено)
+- Список + детальная страница коллекции с радаром, таймлайном, AI-рекомендациями
+- Список + детальная страница товара с health score, ценой, конвейером статусов
 
-### ✅ Phase 3 — Dashboard (Complete)
+### ✅ Фаза 3 — Dashboard (Завершено)
 - StatCard, StatCardGrid, AiOverview, RecentCollections, ActivityFeed, QuickActions
-- I18n infrastructure, migration to useLocale() throughout
+- I18n-инфраструктура, миграция на useLocale() во всех компонентах
 
-### ✅ Phase 4 — Pipeline (Complete)
-- Kanban board with drag-and-drop
-- 12-column product status workflow
+### ✅ Фаза 4 — Pipeline (Завершено)
+- Kanban-доска с drag-and-drop
+- 12-колоночный workflow статусов товаров
 
-### ✅ Phase 5 — Reviews & Marketplace (Complete)
-- Review analytics, sentiment, AI insights
-- Marketplace connections, product listings
+### ✅ Фаза 5 — Отзывы и Маркетплейсы (Завершено)
+- Аналитика отзывов, тональность, AI-инсайты
+- Подключение маркетплейсов, листинг товаров
 
-### ✅ Phase 6 — Content & Production (Complete)
-- Asset management, supplier directory, batch tracking
+### ✅ Фаза 6 — Контент и Производство (Завершено)
+- Управление ассетами, справочник поставщиков, отслеживание партий
 
-### ✅ Phase 7 — Tasks, Notifications & Knowledge (Complete)
-- Priority tasks, notification center, knowledge base
+### ✅ Фаза 7 — Задачи, Уведомления и База знаний (Завершено)
+- Приоритизированные задачи, центр уведомлений, база знаний
 
-### ✅ Phase 8 — Insights, Analytics & Integrations (Complete)
-- Executive dashboard with charts
-- Full analytics suite with Recharts
-- 8 integration connection cards
+### ✅ Фаза 8 — Инсайты, Аналитика и Интеграции (Завершено)
+- Executive dashboard с графиками
+- Полный аналитический набор с Recharts
+- 8 карточек интеграций
 
-### 🔜 Phase 9 — Data Layer & Real API
-- Replace all DEMO_* arrays with actual API calls to backend
-- React Query hooks for all data fetching
-- Loading, error, and empty states for every page
+### 🔜 Фаза 9 — Слой данных и реальное API
+- Замена всех DEMO_* массивов на реальные API-вызовы
+- React Query хуки для всех данных
+- Состояния загрузки, ошибок и пустых списков для каждой страницы
 
-### 🔜 Phase 10 — i18n & UX Polish
-- Language switcher in Header/Settings
-- Complete English translation (en.json)
-- Keyboard shortcuts, advanced filtering, bulk operations
+### 🔜 Фаза 10 — i18n и UX-полировка
+- Переключатель языка в Header/Settings
+- Полный английский перевод (en.json)
+- Горячие клавиши, расширенная фильтрация, массовые операции
 - Mobile-responsive sidebar
 
-### 🔜 Phase 11 — Advanced AI
-- RAG-based knowledge base search
-- AI image generation for product photos
-- Predictive analytics with time-series forecasting
-- Automated marketplace listing optimization
+### 🔜 Фаза 11 — Продвинутый AI
+- RAG-поиск по базе знаний
+- AI-генерация изображений для фото товаров
+- Предиктивная аналитика с прогнозированием временных рядов
+- Автоматическая оптимизация листингов на маркетплейсах
 
-### 🔜 Phase 12 — Production Launch
-- Stripe/LemonSqueezy billing integration
-- Team invitation flows
-- Audit logging
-- SOC-2 readiness
-
----
-
-## 9. Success Metrics
-
-| Metric | Target | Measurement |
-|--------|--------|-------------|
-| Time-to-launch reduction | 40% | Collection cycle time |
-| User activation | 60% D7 retention | Users who create/manage a collection |
-| AI insight accuracy | >90% | User feedback on recommendations |
-| Page load time | <2s | Lighthouse / Web Vitals |
-| Build stability | 0 errors | CI pipeline |
+### 🔜 Фаза 12 — Production Launch
+- Интеграция биллинга Stripe/LemonSqueezy
+- Приглашение участников команды
+- Аудит действий
+- Подготовка к SOC-2
 
 ---
 
-## 10. Competitive Landscape
+## 9. Метрики успеха
 
-| Competitor | Strengths | Weaknesses vs LaunchFlow |
-|------------|-----------|-------------------------|
-| Excel / Google Sheets | Universal, cheap | No automation, no AI, no real-time sync |
-| Trello / Notion | Flexible, familiar | Not fashion-specific, no marketplace integration |
-| Asana / Wrike | Powerful project management | No pipeline view, no AI, no content management |
-| Marketplace dashboards (WB/Ozon) | Official data | Siloed, no cross-platform view, no planning tools |
+| Метрика | Цель | Измерение |
+|---------|------|-----------|
+| Сокращение time-to-launch | 40% | Время цикла коллекции |
+| Активация пользователей | 60% D7 retention | Пользователи, создавшие/ведущие коллекцию |
+| Точность AI-инсайтов | >90% | Обратная связь пользователей |
+| Время загрузки страницы | <2s | Lighthouse / Web Vitals |
+| Стабильность сборки | 0 ошибок | CI pipeline |
 
-**LaunchFlow Differentiator:** Purpose-built for fashion brands with AI that understands collection readiness, marketplace performance, and production risks — not just a generic project management tool.
+---
+
+## 10. Конкурентная среда
+
+| Конкурент | Сильные стороны | Слабые стороны vs LaunchFlow |
+|-----------|----------------|------------------------------|
+| Excel / Google Sheets | Универсальность, бесплатно | Нет автоматизации, нет AI, нет real-time синхронизации |
+| Trello / Notion | Гибкость, привычность | Не для fashion, нет интеграции с МП |
+| Asana / Wrike | Мощное управление проектами | Нет pipeline-представления, нет AI, нет управления контентом |
+| Кабинеты МП (WB/Ozon) | Официальные данные | Разрозненно, нет кросс-платформенного вида, нет инструментов планирования |
+
+**Отличие LaunchFlow:** Создан специально для fashion-брендов с AI, который понимает готовность коллекций, эффективность на маркетплейсах и производственные риски — а не просто ещё один инструмент управления проектами.
