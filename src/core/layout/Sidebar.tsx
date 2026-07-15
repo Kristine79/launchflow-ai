@@ -31,9 +31,20 @@ export function Sidebar() {
         collapsed ? 'w-16' : 'w-64'
       )}
     >
-      <div className="flex h-14 items-center justify-center px-4 border-b">
-        <img src={logoSrc} alt="LaunchFlow AI" className="h-10 w-auto object-contain" />
-      </div>
+      <AnimatePresence>
+        {!collapsed && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
+            className="border-b overflow-hidden"
+          >
+            <div className="flex items-center justify-center px-4 py-3">
+              <img src={logoSrc} alt="LaunchFlow AI" className="w-full h-auto object-contain" />
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       <ScrollArea className="flex-1 py-2">
         <nav className="space-y-0.5 px-2">
@@ -67,11 +78,6 @@ export function Sidebar() {
                     </motion.span>
                   )}
                 </AnimatePresence>
-                {item.phase > 2 && !collapsed && (
-                  <span className="text-[10px] text-muted-foreground/30 font-mono">
-                    v{item.phase}
-                  </span>
-                )}
               </NavLink>
             );
           })}
