@@ -91,8 +91,8 @@ export function Sidebar({ mobileOpen, onMobileClose }: SidebarProps) {
 
   const logoBlock = (!collapsed || isMobile) && (
     <div className="border-b overflow-hidden">
-      <div className="flex items-center justify-center px-4 py-3">
-        <img src={logoSrc} alt="LaunchFlow AI" className="w-full h-auto object-contain" />
+      <div className="flex items-center justify-center px-4 py-2">
+        <img src={logoSrc} alt="LaunchFlow AI" className="w-3/4 h-auto object-contain" />
       </div>
     </div>
   );
