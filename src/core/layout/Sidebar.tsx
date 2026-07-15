@@ -6,11 +6,12 @@ import { useLocale } from '@/core/i18n/I18nProvider';
 import {
   LayoutDashboard, Layers, Shirt, Kanban, MessageSquare, Store,
   Image, Factory, CheckSquare, Bell, BookOpen, Brain, BarChart3,
-  Puzzle, History, Zap, ChevronLeft, ChevronRight, Sparkles,
+  Puzzle, History, Zap, ChevronLeft, ChevronRight,
 } from 'lucide-react';
 import { ScrollArea } from '@/core/ui/scroll-area';
 import { motion, AnimatePresence } from 'framer-motion';
 import type { ElementType } from 'react';
+import logoSrc from '@/assets/logo.png';
 
 const iconMap: Record<string, ElementType> = {
   LayoutDashboard, Layers, Shirt, Kanban, MessageSquare, Store,
@@ -31,8 +32,8 @@ export function Sidebar() {
       )}
     >
       <div className="flex h-14 items-center gap-2 px-4 border-b">
-        <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary shrink-0">
-          <Sparkles className="h-4 w-4 text-primary-foreground" />
+        <div className="flex h-8 w-8 items-center justify-center shrink-0">
+          <img src={logoSrc} alt="LaunchFlow AI" className="h-8 w-8 object-contain" />
         </div>
         <AnimatePresence>
           {!collapsed && (
