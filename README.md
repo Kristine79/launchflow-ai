@@ -52,6 +52,19 @@ LaunchFlow AI — full-stack SaaS-платформа для управления
 - **Аналитика**: полный набор — линейный график выручки, столбчатая диаграмма категорий, круговая по платформам
 - **Интеграции**: управление подключениями для 8 платформ (WB, Ozon, Google Drive, Telegram, Slack, Notion, Shopify, ChatGPT)
 
+### Фаза 9: Executive Intelligence Layer
+- **AI Executive Briefing**: company health score (0-100), статусы 6 AI-агентов, критические проблемы с expand/collapse
+- **AI Agents**: CEO, Collection, Production, Marketplace, Customer, Analytics — каждый со своей аналитикой
+- **Decision Engine**: авто-определение критических проблем, варианты решений с effort/impact/confidence
+- **Suggestion Autopilot**: AI-предложения с Approve/Reject, auto-apply-all
+- **Ask Business**: структурированные ответы на бизнес-вопросы (выручка, производство, коллекции, WB)
+- **Scenario Simulator**: «что если» симуляции с 6 слайдерами и 5 пресетами
+- **Audit Log**: журнал аудита с таймлайном, фильтрами и экспортом
+- **Toast Notifications**: системные уведомления (success/error/warning/info)
+- **Event Bus**: архитектура событий для отслеживания действий в системе
+- **Global Search**: ⌘K командная палитра с быстрыми действиями и навигацией
+- **UX Polish**: brand colors (violet), skeleton shimmer, card hover lift, micro-animations
+
 ## Локализация
 
 - По умолчанию: русский (ru) — полная, 300+ ключей
@@ -93,14 +106,24 @@ npm run build    # tsc -b && vite build — 0 ошибок
 
 ```
 src/
+├── ai/                # AI-service интерфейсы + mock + реальная реализация + агенты
+│   ├── agents/        # AI-агенты: CEO, Collection, Production, Marketplace, Customer, Analytics
+│   └── decision-engine/ # Движок решений с вариантами действий
+├── api/               # API-клиент и типы endpoint'ов
 ├── core/              # Общеприкладное: layout, auth, theme, UI-примитивы
 │   ├── auth/          # Clerk, RBAC, demo auth, protected routes
+│   ├── events/        # EventBus для отслеживания действий
 │   ├── i18n/          # I18nProvider, хук useLocale()
-│   ├── layout/        # AppLayout, Sidebar, Header, DemoBanner
+│   ├── layout/        # AppLayout, Sidebar (с логотипом), Header (⌘K поиск), DemoBanner
 │   ├── theme/         # ThemeProvider, ThemeToggle
-│   └── ui/            # shadcn/ui компоненты (badge, button, card, и т.д.)
+│   └── ui/            # shadcn/ui компоненты (badge, button, card, input, toast, skeleton, scroll-area)
 ├── features/          # Модули фич
+│   ├── ask/           # AI Ask Business — чат с AI
+│   ├── audit/         # Журнал аудита
+│   ├── autopilot/     # Suggestion Autopilot — Approve/Reject
+│   ├── briefing/      # ExecutiveBriefing — health score, агенты, проблемы
 │   ├── collections/   # pages/ + components/ + hooks/
+│   ├── decision/      # DecisionPanel — варианты решений
 │   ├── products/
 │   ├── pipeline/
 │   ├── reviews/
@@ -113,9 +136,9 @@ src/
 │   ├── insights/
 │   ├── analytics/
 │   ├── integrations/
+│   ├── search/        # CommandPalette — ⌘K глобальный поиск
+│   ├── simulator/     # ScenarioSimulator — «что если» симуляции
 │   └── settings/
-├── ai/                # AI-service интерфейсы + mock + реальная реализация
-├── api/               # API-клиент и типы endpoint'ов
 ├── lib/               # Утилиты, константы (nav items, статусы), score helpers
 ├── locales/           # ru.json (полный), en.json (скелет)
 └── types/             # Глобальные TypeScript-типы

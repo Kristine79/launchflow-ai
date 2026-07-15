@@ -1,7 +1,7 @@
 # LaunchFlow AI — Product Requirements Document
 
 **Версия:** 0.1.0
-**Статус:** MVP завершён (Фазы 1-8)
+**Статус:** MVP завершён (Фазы 1-9)
 **Дата:** Июль 2026
 
 ---
@@ -250,27 +250,37 @@ LaunchFlow AI — AI-операционная система для fashion-бр
 - Полный аналитический набор с Recharts
 - 8 карточек интеграций
 
-### 🔜 Фаза 9 — Слой данных и реальное API
+### ✅ Фаза 9 — Executive Intelligence Layer (Завершено)
+- 6 AI-агентов: CEO, Collection, Production, Marketplace, Customer, Analytics
+- ExecutiveBriefing: company health score (0-100), статусы агентов, критические проблемы
+- DecisionEngine: авто-определение проблем, варианты решений с effort/impact
+- SuggestionAutopilot: AI-предложения с Approve/Reject, auto-apply
+- AskBusiness: структурированные ответы на бизнес-вопросы
+- ScenarioSimulator: «что если» симуляции с 6 слайдерами, 5 пресетами
+- AuditLog: журнал аудита с таймлайном и экспортом
+- Toast Notifications, Event Bus, CommandPalette (⌘K)
+- Brand colors (violet), skeleton shimmer, card hover, micro-animations
+
+### 🔜 Фаза 10 — Слой данных и реальное API
 - Замена всех DEMO_* массивов на реальные API-вызовы
 - React Query хуки для всех данных
 - Состояния загрузки, ошибок и пустых списков для каждой страницы
 
-### 🔜 Фаза 10 — i18n и UX-полировка
+### 🔜 Фаза 11 — i18n и UX-полировка
 - Переключатель языка в Header/Settings
 - Полный английский перевод (en.json)
 - Горячие клавиши, расширенная фильтрация, массовые операции
 - Mobile-responsive sidebar
 
-### 🔜 Фаза 11 — Продвинутый AI
+### 🔜 Фаза 12 — Продвинутый AI
 - RAG-поиск по базе знаний
 - AI-генерация изображений для фото товаров
 - Предиктивная аналитика с прогнозированием временных рядов
 - Автоматическая оптимизация листингов на маркетплейсах
 
-### 🔜 Фаза 12 — Production Launch
+### 🔜 Фаза 13 — Production Launch
 - Интеграция биллинга Stripe/LemonSqueezy
 - Приглашение участников команды
-- Аудит действий
 - Подготовка к SOC-2
 
 ---
