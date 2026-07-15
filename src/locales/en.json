@@ -1,0 +1,366 @@
+{
+  "brand": {
+    "name": "",
+    "tagline": ""
+  },
+  "nav": {
+    "dashboard": "",
+    "collections": "",
+    "products": "",
+    "pipeline": "",
+    "reviews": "",
+    "marketplace": "",
+    "contentStudio": "",
+    "production": "",
+    "tasks": "",
+    "notifications": "",
+    "knowledgeBase": "",
+    "executiveInsights": "",
+    "analytics": "",
+    "integrations": ""
+  },
+  "header": {
+    "settings": "",
+    "profile": "",
+    "signOut": ""
+  },
+  "demo": {
+    "banner": "",
+    "welcome": "",
+    "description": "",
+    "exploreDescription": "",
+    "signIn": "",
+    "createAccount": "",
+    "enterDemo": "",
+    "or": ""
+  },
+  "auth": {
+    "clerkNotConfigured": "",
+    "signInPlaceholder": "",
+    "signUpPlaceholder": ""
+  },
+  "common": {
+    "backTo": "",
+    "launchPrefix": "",
+    "count": "",
+    "countProducts": "",
+    "completePercent": "",
+    "vsLastMonth": "",
+    "collections": "",
+    "launched": "",
+    "noRecommendations": ""
+  },
+  "dashboard": {
+    "title": "",
+    "description": "",
+    "executiveOverview": "",
+    "aiPowered": "",
+    "recentCollections": "",
+    "recentActivity": "",
+    "newCollection": "",
+    "newCollectionDesc": "",
+    "newProduct": "",
+    "newProductDesc": "",
+    "viewTasks": "",
+    "viewTasksDesc": "",
+    "openReviews": "",
+    "openReviewsDesc": "",
+    "statTotalCollections": "",
+    "statActiveCollections": "",
+    "statProductsInProduction": "",
+    "statAvgReadiness": "",
+    "aiSummary": "",
+    "aiHighlightOnTrack": "",
+    "aiHighlightNeedsAttention": "",
+    "aiHighlightAvgReadiness": ""
+  },
+  "collections": {
+    "title": "",
+    "description": "",
+    "backToCollections": "",
+    "launchReadiness": "",
+    "categoryScores": "",
+    "readinessBreakdown": "",
+    "ready": "",
+    "timeline": "",
+    "products": "",
+    "aiSummary": "",
+    "aiRecommendations": "",
+    "radarTitle": "",
+    "timelineTitle": "",
+    "timelineStatus": {
+      "completed": "",
+      "in_progress": "",
+      "pending": ""
+    },
+    "status": {
+      "planning": "",
+      "design": "",
+      "sampling": "",
+      "production": "",
+      "content": "",
+      "marketplace": "",
+      "launched": ""
+    },
+    "categories": {
+      "design": "",
+      "samples": "",
+      "production": "",
+      "photos": "",
+      "video": "",
+      "seo": "",
+      "wildberries": "",
+      "ozon": "",
+      "documents": "",
+      "certificates": "",
+      "tasks": "",
+      "quality": "",
+      "approval": ""
+    }
+  },
+  "products": {
+    "title": "",
+    "description": "",
+    "backToProducts": "",
+    "productHealth": "",
+    "health": "",
+    "details": "",
+    "pricing": "",
+    "status": "",
+    "color": "",
+    "material": "",
+    "sizeRange": "",
+    "supplier": "",
+    "factory": "",
+    "costPrice": "",
+    "recommendedPrice": "",
+    "margin": "",
+    "statusLabel": {
+      "idea": "",
+      "sketch": "",
+      "design": "",
+      "sample": "",
+      "approval": "",
+      "production": "",
+      "photo": "",
+      "content": "",
+      "wildberries": "",
+      "ozon": "",
+      "launched": "",
+      "optimization": ""
+    }
+  },
+  "pipeline": {
+    "title": "",
+    "description": "",
+    "noProducts": ""
+  },
+  "reviews": {
+    "title": "",
+    "description": "",
+    "totalReviews": "",
+    "avgRating": "",
+    "positiveShare": "",
+    "neutralShare": "",
+    "negativeShare": "",
+    "recentReviews": "",
+    "aiInsight": "",
+    "noReviews": "",
+    "positive": "",
+    "neutral": "",
+    "negative": "",
+    "aiSummary": ""
+  },
+  "content": {
+    "title": "",
+    "aiInsight": "",
+    "description": "",
+    "assets": "",
+    "photosReady": "",
+    "videosReady": "",
+    "pagesReady": "",
+    "type": {
+      "photo": "",
+      "video": "",
+      "content": ""
+    },
+    "status": {
+      "done": "",
+      "in_progress": "",
+      "pending": ""
+    },
+    "aiSummary": ""
+  },
+  "tasks": {
+    "title": "",
+    "aiInsight": "",
+    "description": "",
+    "totalTasks": "",
+    "completed": "",
+    "pending": "",
+    "overdue": "",
+    "aiSummary": "",
+    "status": {
+      "todo": "",
+      "in_progress": "",
+      "review": "",
+      "done": ""
+    },
+    "priority": {
+      "low": "",
+      "medium": "",
+      "high": "",
+      "urgent": ""
+    }
+  },
+  "notifications": {
+    "title": "",
+    "description": "",
+    "markAllRead": "",
+    "noNotifications": "",
+    "totalUnread": "",
+    "type": {
+      "info": "",
+      "warning": "",
+      "success": "",
+      "error": ""
+    }
+  },
+  "knowledge": {
+    "title": "",
+    "aiInsight": "",
+    "description": "",
+    "documents": "",
+    "tags": "",
+    "aiSummary": "",
+    "categories": "",
+    "lastUpdated": ""
+  },
+  "production": {
+    "title": "",
+    "description": "",
+    "suppliers": "",
+    "batches": "",
+    "activeSuppliers": "",
+    "totalBatches": "",
+    "inProduction": "",
+    "completed": "",
+    "status": {
+      "active": "",
+      "inactive": "",
+      "planned": "",
+      "in_progress": "",
+      "completed": "",
+      "delayed": ""
+    }
+  },
+  "marketplace": {
+    "title": "",
+    "description": "",
+    "connected": "",
+    "disconnected": "",
+    "listed": "",
+    "pending": "",
+    "totalProducts": "",
+    "activeListings": "",
+    "wildberries": "",
+    "ozon": "",
+    "productsOn": "",
+    "error": ""
+  },
+  "placeholder": {
+    "pipeline": "",
+    "reviews": "",
+    "marketplace": "",
+    "contentStudio": "",
+    "production": "",
+    "tasks": "",
+    "notifications": "",
+    "knowledgeBase": "",
+    "insights": "",
+    "analytics": "",
+    "integrations": ""
+  },
+  "phase": {
+    "comingSoon": ""
+  },
+  "settings": {
+    "title": "",
+    "appearance": "",
+    "appearanceDesc": "",
+    "theme": "",
+    "themeDesc": "",
+    "light": "",
+    "dark": "",
+    "notifications": "",
+    "notificationsDesc": "",
+    "notificationsPlaceholder": "",
+    "account": "",
+    "accountDesc": "",
+    "accountPlaceholder": ""
+  },
+  "aiRec": {
+    "high": "",
+    "medium": "",
+    "low": ""
+  },
+  "activity": {
+    "collectionLaunched": "",
+    "photosCompleted": "",
+    "productionStarted": "",
+    "newRecommendation": "",
+    "samplesApproved": "",
+    "marketplacePublished": ""
+  },
+  "demoUser": {
+    "name": "",
+    "email": "",
+    "role": ""
+  },
+  "aiDemo": {
+    "collectionSummary": "",
+    "recProductionTitle": "",
+    "recProductionDesc": "",
+    "recPhotoTitle": "",
+    "recPhotoDesc": "",
+    "recMarketplaceTitle": "",
+    "recMarketplaceDesc": "",
+    "recSizeGuideTitle": "",
+    "recSizeGuideDesc": "",
+    "recStitchingTitle": "",
+    "recStitchingDesc": ""
+  },
+  "notifCount": "",
+  "insights": {
+    "title": "",
+    "description": "",
+    "totalProducts": "",
+    "activeCollections": "",
+    "avgReadiness": "",
+    "revenueForecast": "",
+    "aiSummary": "",
+    "readinessBreakdown": "",
+    "recommendations": "",
+    "trend": ""
+  },
+  "analytics": {
+    "title": "",
+    "description": "",
+    "totalRevenue": "",
+    "avgOrderValue": "",
+    "conversionRate": "",
+    "activeUsers": "",
+    "revenueChart": "",
+    "categoryBreakdown": "",
+    "platformBreakdown": ""
+  },
+  "integrations": {
+    "title": "",
+    "description": "",
+    "activeIntegrations": "",
+    "connected": "",
+    "disconnected": "",
+    "connect": "",
+    "disconnect": ""
+  }
+}

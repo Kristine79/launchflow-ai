@@ -1,0 +1,366 @@
+{
+  "brand": {
+    "name": "LaunchFlow AI",
+    "tagline": "AI-операционная система для fashion-брендов"
+  },
+  "nav": {
+    "dashboard": "Командный центр",
+    "collections": "Коллекции",
+    "products": "Товары",
+    "pipeline": "Конвейер",
+    "reviews": "Отзывы",
+    "marketplace": "Маркетплейсы",
+    "contentStudio": "Контент-студия",
+    "production": "Производство",
+    "tasks": "Задачи",
+    "notifications": "Уведомления",
+    "knowledgeBase": "База знаний",
+    "executiveInsights": "AI-инсайты",
+    "analytics": "Аналитика",
+    "integrations": "Интеграции"
+  },
+  "header": {
+    "settings": "Настройки",
+    "profile": "Профиль",
+    "signOut": "Выйти"
+  },
+  "demo": {
+    "banner": "Демо-режим — изучение LaunchFlow AI с тестовыми данными",
+    "welcome": "Добро пожаловать в LaunchFlow AI",
+    "description": "AI-операционная система для fashion-брендов",
+    "exploreDescription": "Изучайте платформу с предзагруженными демо-данными. Регистрация не требуется.",
+    "signIn": "Войти",
+    "createAccount": "Создать аккаунт",
+    "enterDemo": "Войти в демо-режим",
+    "or": "Или"
+  },
+  "auth": {
+    "clerkNotConfigured": "Clerk не настроен.",
+    "signInPlaceholder": "Вход через Clerk появится здесь после настройки.",
+    "signUpPlaceholder": "Регистрация через Clerk появится здесь после настройки."
+  },
+  "common": {
+    "backTo": "Назад к {page}",
+    "launchPrefix": "Запуск {date}",
+    "count": "{n} шт.",
+    "countProducts": "{n} товаров",
+    "completePercent": "{n}% готово",
+    "vsLastMonth": "{n}% за месяц",
+    "collections": "коллекций",
+    "launched": "запущено",
+    "noRecommendations": "Рекомендаций нет — всё в порядке"
+  },
+  "dashboard": {
+    "title": "Командный центр",
+    "description": "Обзор коллекций, товаров и AI-аналитики в реальном времени",
+    "executiveOverview": "Обзор состояния",
+    "aiPowered": "AI-аналитика",
+    "recentCollections": "Последние коллекции",
+    "recentActivity": "Последние действия",
+    "newCollection": "Новая коллекция",
+    "newCollectionDesc": "Создать новую коллекцию",
+    "newProduct": "Новый товар",
+    "newProductDesc": "Добавить товар в коллекцию",
+    "viewTasks": "Задачи",
+    "viewTasksDesc": "Проверить прогресс команды",
+    "openReviews": "Отзывы",
+    "openReviewsDesc": "Аналитика отзывов и обратной связи",
+    "statTotalCollections": "Всего коллекций",
+    "statActiveCollections": "Активных коллекций",
+    "statProductsInProduction": "Товаров в производстве",
+    "statAvgReadiness": "Средняя готовность",
+    "aiSummary": "Коллекции прогрессируют хорошо — 4 из 5 идут по графику. Весна 2027 успешно запущена с высокими показателями готовности. Осень 2027 Премиум требует внимания в производстве и контенте.",
+    "aiHighlightOnTrack": "В графике",
+    "aiHighlightNeedsAttention": "Требует внимания",
+    "aiHighlightAvgReadiness": "Средняя готовность"
+  },
+  "collections": {
+    "title": "Коллекции",
+    "description": "{count} коллекций • {launched} запущено",
+    "backToCollections": "Назад к коллекциям",
+    "launchReadiness": "Готовность к запуску",
+    "categoryScores": "Оценка категорий",
+    "readinessBreakdown": "Детали готовности",
+    "ready": "Готово",
+    "timeline": "Таймлайн",
+    "products": "Товары ({count})",
+    "aiSummary": "AI-сводка",
+    "aiRecommendations": "Рекомендации AI",
+    "radarTitle": "Радар готовности",
+    "timelineTitle": "Таймлайн",
+    "timelineStatus": {
+      "completed": "Завершено",
+      "in_progress": "В работе",
+      "pending": "Ожидает"
+    },
+    "status": {
+      "planning": "Планирование",
+      "design": "Дизайн",
+      "sampling": "Сэмплы",
+      "production": "Производство",
+      "content": "Контент",
+      "marketplace": "Маркетплейс",
+      "launched": "Запущено"
+    },
+    "categories": {
+      "design": "Дизайн",
+      "samples": "Сэмплы",
+      "production": "Производство",
+      "photos": "Фото",
+      "video": "Видео",
+      "seo": "SEO",
+      "wildberries": "Карточка WB",
+      "ozon": "Карточка Ozon",
+      "documents": "Документы",
+      "certificates": "Сертификаты",
+      "tasks": "Задачи",
+      "quality": "Качество",
+      "approval": "Согласование"
+    }
+  },
+  "products": {
+    "title": "Товары",
+    "description": "{count} товаров во всех коллекциях",
+    "backToProducts": "Назад к товарам",
+    "productHealth": "Здоровье товара",
+    "health": "Здоровье",
+    "details": "Детали",
+    "pricing": "Ценообразование",
+    "status": "Статус",
+    "color": "Цвет",
+    "material": "Материал",
+    "sizeRange": "Размеры",
+    "supplier": "Поставщик",
+    "factory": "Фабрика",
+    "costPrice": "Себестоимость",
+    "recommendedPrice": "Рекомендованная цена",
+    "margin": "Маржа",
+    "statusLabel": {
+      "idea": "Идея",
+      "sketch": "Эскиз",
+      "design": "Дизайн",
+      "sample": "Сэмпл",
+      "approval": "Согласование",
+      "production": "Производство",
+      "photo": "Фото",
+      "content": "Контент",
+      "wildberries": "Wildberries",
+      "ozon": "Ozon",
+      "launched": "Запущен",
+      "optimization": "Оптимизация"
+    }
+  },
+  "pipeline": {
+    "title": "Конвейер продуктов",
+    "description": "Перетаскивайте товары между статусами",
+    "noProducts": "Нет товаров"
+  },
+  "reviews": {
+    "title": "Аналитика отзывов",
+    "description": "AI-анализ отзывов с маркетплейсов",
+    "totalReviews": "Всего отзывов",
+    "avgRating": "Средний рейтинг",
+    "positiveShare": "Положительных",
+    "neutralShare": "Нейтральных",
+    "negativeShare": "Отрицательных",
+    "recentReviews": "Последние отзывы",
+    "aiInsight": "AI-инсайт",
+    "noReviews": "Отзывов пока нет",
+    "positive": "Положительный",
+    "neutral": "Нейтральный",
+    "negative": "Отрицательный",
+    "aiSummary": "Общий тон отзывов положительный. Клиенты отмечают качество материалов ({quality}%) и посадку ({fit}%). Основные жалобы — задержки доставки ({delivery}%) и несоответствие размера ({size}%)."
+  },
+  "content": {
+    "title": "Контент-студия",
+    "aiInsight": "AI-инсайт",
+    "description": "Управление фото, видео и контентом товаров",
+    "assets": "Всего ассетов",
+    "photosReady": "Фото готово",
+    "videosReady": "Видео готово",
+    "pagesReady": "Карточки готовы",
+    "type": {
+      "photo": "Фото",
+      "video": "Видео",
+      "content": "Контент"
+    },
+    "status": {
+      "done": "Готово",
+      "in_progress": "В работе",
+      "pending": "Ожидает"
+    },
+    "aiSummary": "Статус контента: фото — {photoPercent}%, видео — {videoPercent}%, карточки — {cardPercent}%. Рекомендуется ускорить производство видео."
+  },
+  "tasks": {
+    "title": "Задачи",
+    "aiInsight": "AI-инсайт",
+    "description": "Управление задачами с AI-подсказками",
+    "totalTasks": "Всего задач",
+    "completed": "Завершено",
+    "pending": "В работе",
+    "overdue": "Просрочено",
+    "aiSummary": "Статус задач: {completedPercent}% выполнено, {overdueCount} просрочено. Рекомендуется назначить ответственных на задачи с высоким приоритетом.",
+    "status": {
+      "todo": "К выполнению",
+      "in_progress": "В работе",
+      "review": "На проверке",
+      "done": "Готово"
+    },
+    "priority": {
+      "low": "Низкий",
+      "medium": "Средний",
+      "high": "Высокий",
+      "urgent": "Срочно"
+    }
+  },
+  "notifications": {
+    "title": "Уведомления",
+    "description": "Центр уведомлений",
+    "markAllRead": "Прочитать все",
+    "noNotifications": "Нет уведомлений",
+    "totalUnread": "Непрочитанных",
+    "type": {
+      "info": "Инфо",
+      "warning": "Внимание",
+      "success": "Успех",
+      "error": "Ошибка"
+    }
+  },
+  "knowledge": {
+    "title": "База знаний",
+    "aiInsight": "AI-инсайт",
+    "description": "Корпоративная база знаний с RAG",
+    "documents": "Документы",
+    "tags": "Теги",
+    "aiSummary": "База знаний содержит {total} документов по {categories} категориям. Последнее обновление: {lastUpdated}. Рекомендуется добавить документы по производству и контролю качества.",
+    "categories": "Категории",
+    "lastUpdated": "Последнее обновление"
+  },
+  "production": {
+    "title": "Производство",
+    "description": "Управление фабриками, поставщиками и партиями",
+    "suppliers": "Поставщики",
+    "batches": "Партии производства",
+    "activeSuppliers": "Активных поставщиков",
+    "totalBatches": "Всего партий",
+    "inProduction": "В производстве",
+    "completed": "Завершено",
+    "status": {
+      "active": "Активен",
+      "inactive": "Неактивен",
+      "planned": "Запланировано",
+      "in_progress": "В производстве",
+      "completed": "Завершено",
+      "delayed": "Задержка"
+    }
+  },
+  "marketplace": {
+    "title": "Маркетплейсы",
+    "description": "Управление Wildberries и Ozon",
+    "connected": "Подключено",
+    "disconnected": "Не подключено",
+    "listed": "Размещено",
+    "pending": "Ожидает размещения",
+    "totalProducts": "Всего товаров",
+    "activeListings": "Активных размещений",
+    "wildberries": "Wildberries",
+    "ozon": "Ozon",
+    "productsOn": "на {name}",
+    "error": "Ошибка"
+  },
+  "insights": {
+    "title": "AI-инсайты",
+    "description": "AI-отчёты, прогнозы и рекомендации для руководителя",
+    "totalProducts": "Всего товаров",
+    "activeCollections": "Активных коллекций",
+    "avgReadiness": "Средняя готовность",
+    "revenueForecast": "Прогноз выручки",
+    "aiSummary": "Сводка: {collectionsActive} активных коллекций, {productsTotal} товаров, средняя готовность {avgReadiness}%. Прогноз роста — {growth}%.",
+    "readinessBreakdown": "Распределение готовности",
+    "recommendations": "Рекомендации AI",
+    "trend": "Тренд"
+  },
+  "analytics": {
+    "title": "Аналитика",
+    "description": "KPI, графики и продвинутая аналитика",
+    "totalRevenue": "Общая выручка",
+    "avgOrderValue": "Средний чек",
+    "conversionRate": "Конверсия",
+    "activeUsers": "Активные пользователи",
+    "revenueChart": "Динамика выручки",
+    "categoryBreakdown": "По категориям",
+    "platformBreakdown": "По платформам"
+  },
+  "integrations": {
+    "title": "Интеграции",
+    "description": "Подключение внешних сервисов и платформ",
+    "activeIntegrations": "Активных интеграций",
+    "connected": "Подключено",
+    "disconnected": "Отключено",
+    "connect": "Подключить",
+    "disconnect": "Отключить"
+  },
+  "placeholder": {
+    "pipeline": "",
+    "reviews": "",
+    "marketplace": "",
+    "contentStudio": "",
+    "production": "",
+    "tasks": "",
+    "notifications": "",
+    "knowledgeBase": "",
+    "insights": "",
+    "analytics": "",
+    "integrations": ""
+  },
+  "phase": {
+    "comingSoon": "Скоро: Phase {phase}"
+  },
+  "settings": {
+    "title": "Настройки",
+    "appearance": "Внешний вид",
+    "appearanceDesc": "Настройте внешний вид LaunchFlow AI",
+    "theme": "Тема",
+    "themeDesc": "Выберите светлую или тёмную тему",
+    "light": "Светлая",
+    "dark": "Тёмная",
+    "notifications": "Уведомления",
+    "notificationsDesc": "Настройте предпочтения уведомлений",
+    "notificationsPlaceholder": "Настройки уведомлений появятся в Phase 7",
+    "account": "Аккаунт",
+    "accountDesc": "Управляйте настройками аккаунта",
+    "accountPlaceholder": "Управление аккаунтом появится в Phase 2"
+  },
+  "aiRec": {
+    "high": "Высокий",
+    "medium": "Средний",
+    "low": "Низкий"
+  },
+  "activity": {
+    "collectionLaunched": "Коллекция запущена",
+    "photosCompleted": "Фото товаров готовы",
+    "productionStarted": "Производство начато",
+    "newRecommendation": "Новая рекомендация",
+    "samplesApproved": "Сэмплы утверждены",
+    "marketplacePublished": "Карточка опубликована на маркетплейсе"
+  },
+  "demoUser": {
+    "name": "Алексей Моргунов",
+    "email": "demo@launchflow.ai",
+    "role": "Владелец"
+  },
+  "aiDemo": {
+    "collectionSummary": "Коллекция «{name}» требует внимания в производстве и контенте перед запуском в сентябре.",
+    "recProductionTitle": "Производство отстаёт от графика",
+    "recProductionDesc": "Выполнено только 40% производственных задач. Приоритетно свяжитесь с поставщиками.",
+    "recPhotoTitle": "Фотосъёмка не начата",
+    "recPhotoDesc": "Фото товаров необходимы в течение 4 недель для размещения на маркетплейсах.",
+    "recMarketplaceTitle": "Карточки маркетплейсов не заполнены",
+    "recMarketplaceDesc": "Необходимо создать карточки товаров для Wildberries и Ozon.",
+    "recSizeGuideTitle": "Добавьте гид по размерам",
+    "recSizeGuideDesc": "Отсутствуют детальные замеры для всех размеров — это увеличивает возвраты.",
+    "recStitchingTitle": "Проверьте качество строчки",
+    "recStitchingDesc": "Последняя проверка QC выявила несоответствие строчки на рукавах."
+  },
+  "notifCount": "5"
+}
